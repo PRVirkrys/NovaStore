@@ -1,0 +1,21 @@
+<article class="cart-item">
+  <!-- Aquí se recibirá el item por @Input -->
+  <img class="cart-item__image" src="https://images.unsplash.com/photo-1585386959984-a41552231658?auto=format&fit=crop&w=400&q=80" alt="Producto en carrito" />
+
+  <div class="cart-item__content">
+    <h3 class="cart-item__name">Smart Bottle Nova</h3>
+    <p class="cart-item__price">49,99 €</p>
+
+    <div class="cart-item__controls">
+      <button class="cart-item__qty-button" type="button" aria-label="Restar cantidad">-</button>
+      <span class="cart-item__qty">1</span>
+      <button class="cart-item__qty-button" type="button" aria-label="Sumar cantidad">+</button>
+      <!-- Aquí se emitirán eventos decreaseQty / increaseQty con @Output -->
+    </div>
+  </div>
+
+  <button class="cart-item__remove" type="button" aria-label="Eliminar producto">
+    <span class="material-symbols-rounded" aria-hidden="true">delete</span>
+    <!-- Aquí se emitirá el evento removeItem con @Output -->
+  </button>
+</article>

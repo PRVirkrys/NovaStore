@@ -1,0 +1,64 @@
+<div class="cart-drawer cart-drawer--open" aria-hidden="false">
+  <button
+    class="cart-drawer__overlay"
+    type="button"
+    aria-label="Cerrar carrito"
+    (click)="closeCart()"
+  ></button>
+  <!-- Aquí se emitirá el evento para cerrar drawer desde el overlay -->
+
+  <aside
+    class="cart-drawer__panel"
+    role="dialog"
+    aria-label="Carrito de compras"
+    (click)="stopPropagation($event)"
+  >
+    <header class="cart-drawer__header">
+      <h2>Tu carrito</h2>
+      <button
+        class="cart-drawer__close"
+        type="button"
+        aria-label="Cerrar carrito"
+        (click)="closeCart()"
+      >
+        <span></span>
+        <span></span>
+        <!-- Aquí se emitirá el evento closeDrawer con @Output -->
+      </button>
+    </header>
+
+    <div class="cart-drawer__content">
+      <div class="cart-drawer__items">
+        <!-- Aquí se renderizarán items del carrito con @for -->
+        <!-- Aquí cada item se enviará al hijo app-cart-item con @Input -->
+        <app-cart-item></app-cart-item>
+        <app-cart-item></app-cart-item>
+        <app-cart-item></app-cart-item>
+      </div>
+
+      <div class="cart-drawer__empty">
+        <h3>Carrito vacío</h3>
+        <p>Añade productos para verlos aquí.</p>
+        <!-- Aquí se mostrará este estado cuando no haya items -->
+      </div>
+    </div>
+
+    <footer class="cart-drawer__summary">
+      <div class="cart-drawer__line">
+        <span>Subtotal</span>
+        <strong>149,97 €</strong>
+      </div>
+      <div class="cart-drawer__line">
+        <span>Envío</span>
+        <strong>4,99 €</strong>
+      </div>
+      <div class="cart-drawer__line cart-drawer__line--total">
+        <span>Total</span>
+        <strong>154,96 €</strong>
+      </div>
+      <!-- Aquí se mostrará el total calculado desde el servicio -->
+
+      <button class="cart-drawer__checkout" type="button">Finalizar compra</button>
+    </footer>
+  </aside>
+</div>

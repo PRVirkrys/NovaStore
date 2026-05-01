@@ -1,0 +1,35 @@
+<section class="favorite-section" id="favoritos">
+  <header class="favorite-section__header">
+    <h2>Favoritos</h2>
+    <button class="favorite-section__clear" type="button">Vaciar favoritos</button>
+    <!-- Aquí se emitirá el evento para limpiar favoritos -->
+  </header>
+
+  <div class="favorite-section__grid">
+    <!-- Aquí se renderizarán favoritos con @for -->
+    <article class="favorite-card">
+      <img class="favorite-card__image" src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=500&q=80" alt="Producto favorito" />
+      <div class="favorite-card__content">
+        <h3 class="favorite-card__name">Lámpara Nova Desk</h3>
+        <p class="favorite-card__price">39,99 €</p>
+      </div>
+      <button class="favorite-card__action" type="button">Añadir</button>
+      <!-- Aquí se emitirá evento para mover favorito al carrito -->
+    </article>
+
+    <article class="favorite-card">
+      <img class="favorite-card__image" src="https://images.unsplash.com/photo-1616628182509-6f8663e52352?auto=format&fit=crop&w=500&q=80" alt="Producto favorito" />
+      <div class="favorite-card__content">
+        <h3 class="favorite-card__name">Backpack Urban Nova</h3>
+        <p class="favorite-card__price">64,90 €</p>
+      </div>
+      <button class="favorite-card__action" type="button">Añadir</button>
+    </article>
+  </div>
+
+  <div class="favorite-section__empty">
+    <h3>Aún no hay favoritos</h3>
+    <p>Marca productos con el icono de corazón para verlos aquí.</p>
+    <!-- Aquí se mostrará el estado vacío cuando la lista esté vacía -->
+  </div>
+</section>

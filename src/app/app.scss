@@ -1,0 +1,88 @@
+.app-shell {
+  min-height: 100dvh;
+
+  &__content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.2rem 1rem 2.5rem;
+  }
+
+  &__hero {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1.4rem;
+  }
+
+  &__hero-copy {
+    border: 1px solid #d9e2f5;
+    border-radius: 26px;
+    background: linear-gradient(140deg, #ffffff 0%, #eef5ff 100%);
+    box-shadow: 0 16px 34px rgba(18, 35, 77, 0.08);
+    padding: clamp(1rem, 3vw, 1.6rem);
+
+    h1 {
+      margin: 0.45rem 0 0.6rem;
+      color: #192744;
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      line-height: 1.2;
+    }
+
+    p {
+      margin: 0;
+      color: #52607c;
+      max-width: 56ch;
+    }
+  }
+
+  &__hero-kicker {
+    color: #3f6fd2;
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  &__hero-card {
+    border-radius: 26px;
+    padding: 1.2rem;
+    display: grid;
+    align-content: center;
+    gap: 0.5rem;
+    color: #fff;
+    background: linear-gradient(160deg, #17356a 0%, #237a9a 100%);
+    box-shadow: 0 16px 32px rgba(18, 35, 77, 0.22);
+
+    p,
+    strong {
+      margin: 0;
+    }
+  }
+
+  &__contact {
+    margin-top: 1.6rem;
+    padding: 1rem 1.1rem;
+    border: 1px solid #d9e2f5;
+    border-radius: 20px;
+    background: #fff;
+
+    h2 {
+      margin: 0;
+      font-size: 1.1rem;
+      color: #1c2d53;
+    }
+
+    p {
+      margin: 0.45rem 0 0;
+      color: #5d6b86;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .app-shell {
+    &__hero {
+      grid-template-columns: 1fr;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+<header class="nav-bar">
+  <div class="nav-bar__inner">
+    <a class="nav-bar__brand" href="#" aria-label="Nova Shop Home">
+      <span class="nav-bar__brand-mark">N</span>
+      <div class="nav-bar__brand-text">
+        <strong>Nova Shop</strong>
+        <small>Premium Essentials</small>
+      </div>
+    </a>
+
+    <nav class="nav-bar__links" aria-label="Navegación principal">
+      <a class="nav-bar__link nav-bar__link--active" href="#">Home</a>
+      <a class="nav-bar__link" href="#productos">Productos</a>
+      <a class="nav-bar__link" href="#favoritos">Favoritos</a>
+      <a class="nav-bar__link" href="#contacto">Contacto</a>
+    </nav>
+
+    <div class="nav-bar__actions">
+      <button
+        class="nav-bar__cart-button"
+        type="button"
+        aria-label="Abrir carrito"
+        (click)="openCart()"
+      >
+        <span class="nav-bar__cart-icon" aria-hidden="true">
+          <span class="material-symbols-rounded">shopping_cart</span>
+        </span>
+        <span class="nav-bar__cart-label">Carrito</span>
+        <span class="nav-bar__cart-count">3</span>
+        <!-- Aquí se mostrará el contador desde el servicio del carrito -->
+        <!-- Aquí se emitirá el evento para abrir el cart-drawer con @Output -->
+      </button>
+
+      <button class="nav-bar__menu-button" type="button" aria-label="Abrir menú móvil">
+        <span></span>
+        <span></span>
+        <span></span>
+        <!-- Aquí se emitirá el evento para abrir/cerrar el menú responsive -->
+      </button>
+    </div>
+  </div>
+</header>

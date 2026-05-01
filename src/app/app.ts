@@ -1,12 +1,23 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import { NavBar } from './components/nav-bar/nav-bar';
+import { ProductList } from './components/product-list/product-list';
+import { FavoriteSection } from './components/favorite-section/favorite-section';
+import { CartDrawer } from './components/cart-drawer/cart-drawer';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [NavBar, ProductList, FavoriteSection, CartDrawer],
   templateUrl: './app.html',
-  styleUrl: './app.scss'
+  styleUrl: './app.scss',
 })
 export class App {
-  protected readonly title = signal('nova-shop-practice');
+  cartIsOpen = false;
+
+  openCart() {
+    this.cartIsOpen = true;
+  }
+
+  closeCart() {
+    this.cartIsOpen = false;
+  }
 }
